@@ -10,6 +10,11 @@ let countDown = () => {
   let myDate = futureDate - currentDate;
   //console.log(myDate);
 
+  if(myDate<0){
+    var mytimer = document.getElementById('mytimer');
+    mytimer.style.display = 'none';
+  }
+
   let days = Math.floor(myDate / 1000 / 60 / 60 / 24);
 
   let hours = Math.floor(myDate / 1000 / 60 / 60) % 24;
